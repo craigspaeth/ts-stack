@@ -3,9 +3,9 @@ import { renderTags } from "solid-meta";
 import Server, { TagDescription } from "../views/Server";
 
 export function render(url: string) {
-	let tags: TagDescription[] = [];
-	const body = renderToString(() => <Server tags={tags} />);
-	const hydration = generateHydrationScript();
-	const head = renderTags(tags);
-	return { head, hydration, body };
+  let tags: TagDescription[] = [];
+  const body = renderToString(() => <Server tags={tags} />);
+  const hydration = generateHydrationScript();
+  const head = renderTags(tags);
+  return { head, hydration, body };
 }
